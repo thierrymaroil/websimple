@@ -1,4 +1,6 @@
+import { UserService } from './user/User.service';
 import { LoginComponent } from './user/login/login.component';
+import { UserTextComponent } from './user/userText/userText.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,7 +13,8 @@ import { Page3Component } from './contents/page3/page3.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContentsComponent } from './contents/contents.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { IUser } from '../types/IUser.interface';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: '', redirectTo: 'contents/home', pathMatch: 'full'},
@@ -32,6 +35,7 @@ const routes: Routes = [
     Page3Component,
     MenuComponent,
     ContentsComponent,
+    UserTextComponent,
     LoginComponent
 
   ],
