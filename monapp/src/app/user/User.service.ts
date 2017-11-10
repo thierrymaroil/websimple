@@ -11,7 +11,7 @@ export class UserService {
     user: IUser;
 
     constructor() {
-        this.user = { login: 'gilles', password: 'test' };
+        this.user = { login: 'thierry', password: 'test' };
        }
         signInUser(user: IUser): boolean {
           return (user.login === this.user.login && user.password === this.user.password );

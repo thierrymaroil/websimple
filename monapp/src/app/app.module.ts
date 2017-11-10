@@ -1,4 +1,4 @@
-import { UserService } from './user/User.service';
+import { UserService } from './user/user.service';
 import { LoginComponent } from './user/login/login.component';
 import { UserTextComponent } from './user/userText/userText.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -43,7 +43,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
